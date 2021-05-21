@@ -30,6 +30,7 @@ public class VulnReport extends AbstractThread {
     protected void send() throws Exception {
         while (EngineManager.hasNewReport()) {
             String report = EngineManager.getNewReport();
+            logger.error(report);
             try {
                 if (report != null && !report.isEmpty()) {
                     boolean success = HttpClientUtils.sendPost(Constants.API_REPORT_UPLOAD, report);
