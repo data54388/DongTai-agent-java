@@ -142,8 +142,7 @@ public class IastClassAncestorQuery {
         while (!queue.isEmpty()) {
             String currentClass = queue.poll();
             try {
-                //fixme:有时候ClassLoader会为空，先处理一下
-                InputStream inputStream = (this.loader == null ? this.getClass().getClassLoader() : this.loader).getResourceAsStream(currentClass + ".class");
+                InputStream inputStream = this.loader.getResourceAsStream(currentClass + ".class");
                 if (inputStream != null) {
                     ClassReader cr = new ClassReader(inputStream);
                     inputStream.close();
