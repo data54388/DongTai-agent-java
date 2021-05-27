@@ -117,6 +117,11 @@ public class ConfigMatcher {
             hook = false;
             logger.trace("ignore transform {} in loader={}. reason: class is in blacklist", className, loader);
         }
+
+        if (className != null && className.equals("com/secnium/iast/thirdparty/org/json/JSONObject")) {
+            hook = true;
+        }
+
         return hook;
     }
 

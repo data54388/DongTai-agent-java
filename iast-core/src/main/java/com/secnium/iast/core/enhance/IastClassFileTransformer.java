@@ -235,7 +235,6 @@ public class IastClassFileTransformer implements ClassFileTransformer {
      */
     private void retransform() {
         List<Class<?>> waitingReTransformClasses = IastClassHookPointMatcher.findForRetransform(inst, true);
-        waitingReTransformClasses.add(JSONObject.class);
         final int total = waitingReTransformClasses.size();
         int index = 0;
         for (final Class<?> waitingReTransformClass : waitingReTransformClasses) {

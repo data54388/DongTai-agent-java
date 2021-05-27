@@ -9,12 +9,12 @@ import org.objectweb.asm.ClassVisitor;
  */
 public class DispatchJsonObject implements DispatchPlugin {
 
-    String matchclass = "com/secnium/iast/thirdparty/org/json";
+    String matchclass = "org/json/JSONObject";
 
     @Override
     public ClassVisitor dispatch(ClassVisitor classVisitor, IastContext context) {
         if (context.getClassName().equals(isMatch())) {
-            return new JsonObjectAdapter(classVisitor);
+            return new JsonObjectAdapter(classVisitor, context);
         }
         return classVisitor;
     }

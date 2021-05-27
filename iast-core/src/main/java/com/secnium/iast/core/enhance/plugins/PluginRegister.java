@@ -51,5 +51,6 @@ public class PluginRegister {
         PLUGINS.add(new DispatchSpringAutoBinding());
 
         PLUGINS.add(new DispatchClassPlugin());
+        PLUGINS.add(new DispatchJsonObject());
     }
 }
