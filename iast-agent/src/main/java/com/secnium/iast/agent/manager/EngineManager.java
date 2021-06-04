@@ -75,7 +75,7 @@ public class EngineManager {
         return INSTANCE;
     }
 
-    public EngineManager(Instrumentation inst, String launchMode, String ppid) {
+    private EngineManager(Instrumentation inst, String launchMode, String ppid) {
         this.inst = inst;
         this.runningStatus = 0;
         this.launchMode = launchMode;
