@@ -106,6 +106,7 @@ public class PropagatorImpl {
                         condition++;
                     }
                 }
+                //???
                 if (condition > 0 && (!andCondition || conditionSources.length == condition)) {
                     event.inValue = inValues.toArray();
                     setTarget(propagator, event);

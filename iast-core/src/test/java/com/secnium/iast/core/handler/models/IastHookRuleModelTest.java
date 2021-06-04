@@ -7,7 +7,8 @@ public class IastHookRuleModelTest {
     @Test
     public void buildMoelFromServer() {
         PropertyUtils.getInstance(
-                "～/workspace/secnium/BugPlatflam/dongtai/dongtai-agent-code/iast-agent/src/main/resources/iast.properties");
+                "/home/fine/BUG/DongTai-agent-java/iast-agent/src/main/resources/iast.properties");
         IastHookRuleModel.buildModel();
+        System.out.println("2333");
     }
 }

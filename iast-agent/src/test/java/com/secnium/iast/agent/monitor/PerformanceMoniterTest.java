@@ -18,7 +18,7 @@ public class PerformanceMoniterTest {
     public void isStop() {
         PerformanceMonitor performanceMoniter = new PerformanceMonitor(EngineManager.getInstance());
         double unUserdRate = performanceMoniter.memUsedRate();
-        boolean status = performanceMoniter.isStop(unUserdRate, 2);
+        boolean status = performanceMoniter.isStop(unUserdRate, 0);
         System.out.println("PerformanceMoniterTest.isStop=" + status);
     }
 
@@ -26,7 +26,7 @@ public class PerformanceMoniterTest {
     public void isStart() {
         PerformanceMonitor performanceMoniter = new PerformanceMonitor(EngineManager.getInstance());
         double unUserdRate = performanceMoniter.memUsedRate();
-        boolean status = performanceMoniter.isStart(unUserdRate, 1);
+        boolean status = performanceMoniter.isStart(unUserdRate, 0);
         System.out.println("PerformanceMoniterTest.isStart=" + status);
     }
 
@@ -34,7 +34,7 @@ public class PerformanceMoniterTest {
     public void isUninstall() {
         PerformanceMonitor performanceMoniter = new PerformanceMonitor(EngineManager.getInstance());
         double unUserdRate = performanceMoniter.memUsedRate();
-        boolean status = performanceMoniter.isUninstall(unUserdRate, 3);
+        boolean status = performanceMoniter.isUninstall(unUserdRate, 0);
         System.out.println("PerformanceMoniterTest.isUninstall=" + status);
     }
 
@@ -42,7 +42,7 @@ public class PerformanceMoniterTest {
     public void isInstall() {
         PerformanceMonitor performanceMoniter = new PerformanceMonitor(EngineManager.getInstance());
         double unUserdRate = performanceMoniter.memUsedRate();
-        boolean status = performanceMoniter.isInstall(unUserdRate, 4);
+        boolean status = performanceMoniter.isInstall(unUserdRate, 0);
         System.out.println("PerformanceMoniterTest.isInstall=" + status);
     }
 
